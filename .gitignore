@@ -34,3 +34,6 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# pasta arquivos img e documentos do projeto
+arquivos_trabalho_extensao_app
