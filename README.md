@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 # App Para Orçamento De Serralheria
-=======
-<<<<<<< HEAD
+
 # Aplicativo de agendamento de consultas médicas para unidades de saúde pública
 ## Documento da 1º etapa levantamento de requisitos
 ## Requisitos versão 1.0
->>>>>>> c7edf34 (resolvendo conflitos)
 
 ## Levantamento de requisitos
 ### Requisitos versão 1.0
