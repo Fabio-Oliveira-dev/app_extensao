@@ -3,7 +3,7 @@
 ## Levantamento de requisitos
 ### Requisitos versão 1.0
 - 1° tela, tela inicial
-1 - O usuário deverá informar o nome da sua empresa;
+- 1.    O usuário deverá informar o nome da sua empresa;
 - 2.	O usuário deverá informar o tipo de obra;
 - 3.	O usuário deverá informar o nome da pessoa/empresa que será o orçamento;
 - 4.	Deverá ter um botão para escolha dos materiais onde o usuário poderá colocar cada tipo de material que será usado, o valor do material e as medidas de cada material e os usuários poderão colocar quantos materiais eles quiserem;
