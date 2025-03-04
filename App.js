@@ -1,51 +1,45 @@
-import React from 'react';
-import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar } from 'react-native';
+// import * as React from 'react';
+// import { View, Text } from 'react-native';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const Lista = () => {
-  return (
-	<SafeAreaView style={styles.safecontainer}>
-	  <ScrollView style={styles.containerScrollView}>
-		<Text style={styles.text}>
-		  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Pellentesque id dui sed nulla imperdiet scelerisque.
-					Integer malesuada facilisis nibh varius eleifend.
-					Cras a velit laoreet dui interdum consectetur.
-					Pellentesque volutpat placerat mauris in interdum.
-					Pellentesque non egestas sem. Suspendisse malesuada at augue
-					sit amet pretium.
-					Praesent odio nisl, semper vitae purus a, elementum ultrices arcu.
-					Praesent blandit lectus et aliquet posuere.
-					Nulla dictum, nisi id feugiat suscipit, mi sem maximus turpis,
-					vel aliquet massa ex sit amet sem.
-					Sed ullamcorper enim non elit vestibulum, feugiat euismod elit
-					consectetur. In et pulvinar eros.
-					Praesent odio nisl, semper vitae purus a, elementum ultrices arcu.
-					Praesent blandit lectus et aliquet posuere.
-					Nulla dictum, nisi id feugiat suscipit, mi sem maximus turpis,
-					vel aliquet massa ex sit amet sem.
-					Sed ullamcorper enim non elit vestibulum, feugiat euismod elit
-					consectetur. In et pulvinar eros.
-					
-		</Text>
-	  </ScrollView>
-	</SafeAreaView>
-  );
+// import HomeScreen from './screens/home';
+// import AboutScreen from './screens/about';
+
+// const Stack = createNativeStackNavigator();
+
+// function App() {
+// 	return (
+// 	<NavigationContainer>
+// 		<Stack.Navigator>
+// 		<Stack.Screen name='Home' component={HomeScreen} />
+// 		<Stack.Screen name='About' component={AboutScreen} />
+// 		</Stack.Navigator>
+// 	</NavigationContainer>
+// 	);
+// }
+
+// export default App;
+
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import HomeScreen from './screens/home';
+import AboutScreen from './screens/about';
+
+const Tab = createBottomTabNavigator();
+
+function App() {
+	return (
+	<NavigationContainer>
+		<Tab.Navigator>
+		<Tab.Screen name='Home' component={HomeScreen} />
+		<Tab.Screen name='About' component={AboutScreen} />
+		</Tab.Navigator>
+	</NavigationContainer>
+	);
 }
 
-const styles = StyleSheet.create({
-  safecontainer: {
-	flex: 1,
-	paddingTop: StatusBar.currentHeight,
-  },
-  containerScrollView: {
-	backgroundColor: 'orange',
-	marginHorizontal: 20,
-  },
-  text: {
-	fontSize: 32,
-	color: 'white'
-  },
-});
-
-export default Lista;
-
+export default App;
