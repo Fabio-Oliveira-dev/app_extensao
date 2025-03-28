@@ -1,43 +1,25 @@
-// import * as React from 'react';
-// import { View, Text } from 'react-native';
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-// import HomeScreen from './screens/home';
-// import AboutScreen from './screens/about';
-
-// const Stack = createNativeStackNavigator();
-
-// function App() {
-// 	return (
-// 	<NavigationContainer>
-// 		<Stack.Navigator>
-// 		<Stack.Screen name='Home' component={HomeScreen} />
-// 		<Stack.Screen name='About' component={AboutScreen} />
-// 		</Stack.Navigator>
-// 	</NavigationContainer>
-// 	);
-// }
-
-// export default App;
-
+// drawer navegation
+import 'react-native-reanimated';
 import * as React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
 
 import HomeScreen from './screens/home';
-import AboutScreen from './screens/about';
+import FormScreen from './screens/form';
+import OrcamentosScreen from './screens/orcamentos';
 
-const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
 function App() {
 	return (
 	<NavigationContainer>
-		<Tab.Navigator>
-		<Tab.Screen name='Home' component={HomeScreen} />
-		<Tab.Screen name='About' component={AboutScreen} />
-		</Tab.Navigator>
+		<Drawer.Navigator initialRouteName='Home'>
+		<Drawer.Screen name='Home' options={{title:"BEM VINDOS AO APP"}} component={HomeScreen} />
+		<Drawer.Screen name='form' options={{title:"Preencha o formulário"}} component={FormScreen} />
+		<Drawer.Screen name='orcamentos' options={{title:"Seus Orçamentos"}} component={OrcamentosScreen}/>
+		</Drawer.Navigator>
 	</NavigationContainer>
 	);
 }
